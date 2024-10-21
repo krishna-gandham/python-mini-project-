@@ -1,0 +1,29 @@
+menu = {
+'pasta' : 50,
+'coffee' : 30,
+'pancakes': 40,
+'samosa': 20,
+'Tea'  :15,
+}
+
+print ("pasta:50/- \n coffee:30/- \n pancakes:40/-\n samosa:20/- \n Tea:15/- \n");
+item_1 = input("tell me the order from the given menu:");
+order_total= 0;
+
+if item_1 in menu :
+    order_total += menu[item_1]
+    print(f"your item {item_1} has been added to your odrder");
+else :
+    print (f"your item {item_1} has been not available ");
+another_order = input ("tell me do you want anything other item? (Yes/No)");
+if (another_order == 'Yes') :
+    item_2 = input ("select your second order");
+    if item_2 in menu :
+      order_total += menu[item_2]
+      print(f"your item {item_2} has been added in your order");
+elif (another_order == 'No') :
+    print(f"the total amount for the items to pay is {order_total} /-");
+
+
+
+
